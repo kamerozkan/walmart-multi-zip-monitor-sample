@@ -1,0 +1,33 @@
+{
+  "combinationId": "redacted-combination-live-01",
+  "inputRef": "whole-milk-gallon",
+  "itemId": "10450114",
+  "zipCodeRequested": "72712",
+  "zipCodeResolved": "72712",
+  "locationApplied": true,
+  "storeId": "4376",
+  "storeDistanceMiles": 0.51,
+  "status": "success",
+  "reasonCode": null,
+  "reasonCodes": [],
+  "failureStage": null,
+  "message": null,
+  "title": "Great Value Whole Vitamin D Milk, Gallon",
+  "price": 3.14,
+  "currency": "USD",
+  "availability": "IN_STOCK",
+  "sellerName": "Walmart.com",
+  "sellerType": "WALMART",
+  "offerScope": "LOCAL_FULFILLMENT",
+  "fulfillment": {
+    "shipping": "UNAVAILABLE",
+    "pickup": "AVAILABLE",
+    "delivery": "AVAILABLE"
+  },
+  "fetchedAt": "2026-07-28T20:22:16.558Z",
+  "schemaVersion": "1.1.0",
+  "previous": null,
+  "changes": [],
+  "isFirstObservation": false,
+  "latencyMs": 3921
+}

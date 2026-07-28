@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "itemId": "10450118",
+      "reference": "stable-milk-canary"
+    }
+  ],
+  "zipCodes": [
+    "10001",
+    "60601",
+    "75201"
+  ],
+  "includeUnchanged": false,
+  "maxConcurrency": 1,
+  "proxyMode": "RESIDENTIAL",
+  "failOnCriticalHealth": true,
+  "monitorName": "walmart-grocery-price-tracker"
+}

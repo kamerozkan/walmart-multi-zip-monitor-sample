@@ -1,0 +1,23 @@
+{
+  "products": [
+    {
+      "itemId": "10315355",
+      "reference": "white-bread"
+    },
+    {
+      "itemId": "10450114",
+      "reference": "whole-milk-gallon"
+    },
+    {
+      "itemId": "10534289",
+      "reference": "hash-brown-patties"
+    }
+  ],
+  "zipCodes": [
+    "10001",
+    "60601",
+    "90210"
+  ],
+  "monitorKey": "public-price-restock-watch",
+  "includeUnchanged": true
+}

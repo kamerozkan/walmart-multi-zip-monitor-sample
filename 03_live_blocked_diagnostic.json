@@ -1,0 +1,34 @@
+{
+  "combinationId": "redacted-combination-live-03",
+  "inputRef": "unknown-item-demo",
+  "itemId": "999999999041",
+  "zipCodeRequested": "72712",
+  "zipCodeResolved": null,
+  "locationApplied": false,
+  "storeId": null,
+  "storeDistanceMiles": null,
+  "status": "blocked",
+  "reasonCode": "HTTP_ERROR",
+  "reasonCodes": [
+    "HTTP_ERROR"
+  ],
+  "failureStage": "PRODUCT_FETCH",
+  "message": "Walmart product 999999999041 returned HTTP 590",
+  "title": null,
+  "price": null,
+  "currency": null,
+  "availability": "UNKNOWN",
+  "sellerName": null,
+  "sellerType": null,
+  "offerScope": null,
+  "fulfillment": {
+    "shipping": "UNKNOWN",
+    "pickup": "UNKNOWN",
+    "delivery": "UNKNOWN"
+  },
+  "previous": null,
+  "changes": [],
+  "isFirstObservation": false,
+  "fetchedAt": "2026-07-28T20:22:20.544Z",
+  "schemaVersion": "1.1.0"
+}

@@ -1,0 +1,353 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Walmart Multi-Zip Monitor dataset record",
+  "description": "One validated or explicitly failed product-by-ZIP observation from Walmart Multi-Zip Monitor.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "combinationId": {
+      "type": "string",
+      "title": "Combination ID",
+      "description": "Stable identifier for this product-by-ZIP combination."
+    },
+    "inputRef": {
+      "type": "string",
+      "title": "Input reference",
+      "description": "Customer-provided reference, or the Walmart item ID when no reference was supplied."
+    },
+    "itemId": {
+      "type": "string",
+      "title": "Walmart item ID",
+      "description": "Numeric Walmart product identifier.",
+      "example": "10450118"
+    },
+    "zipCodeRequested": {
+      "type": "string",
+      "title": "Requested ZIP",
+      "description": "U.S. ZIP code requested in the input.",
+      "example": "10001"
+    },
+    "zipCodeResolved": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Resolved ZIP",
+      "description": "ZIP code returned for Walmart's selected store context, or null when location validation failed."
+    },
+    "locationApplied": {
+      "type": "boolean",
+      "title": "Location applied",
+      "description": "True only when the response was verified against the selected Walmart store context."
+    },
+    "storeId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Store ID",
+      "description": "Verified Walmart store ID used for the observation."
+    },
+    "storeDistanceMiles": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "Store distance",
+      "description": "Walmart-reported distance from the requested ZIP to the selected store, in miles."
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "description": "Outcome of this product-by-ZIP check.",
+      "enum": [
+        "success",
+        "partial",
+        "not_found",
+        "no_store",
+        "invalid",
+        "timeout",
+        "blocked"
+      ]
+    },
+    "reasonCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Reason code",
+      "description": "Machine-readable primary reason when status is not success."
+    },
+    "reasonCodes": {
+      "type": "array",
+      "title": "Reason codes",
+      "description": "All machine-readable validation or failure reasons for the row.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "failureStage": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Failure stage",
+      "description": "Pipeline stage that produced a non-success result."
+    },
+    "message": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Message",
+      "description": "Concise diagnostic message with secrets and request headers excluded."
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Product title",
+      "description": "Product title returned by Walmart for a validated observation."
+    },
+    "price": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "Current price",
+      "description": "Current selected-offer price. Crossed-out and unit prices are not used."
+    },
+    "currency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Currency",
+      "description": "ISO-style price currency, normally USD."
+    },
+    "availability": {
+      "type": "string",
+      "title": "Availability",
+      "description": "Walmart.com's selected-store digital availability signal; not a physical shelf guarantee.",
+      "enum": [
+        "IN_STOCK",
+        "OUT_OF_STOCK",
+        "UNKNOWN"
+      ]
+    },
+    "sellerName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Seller name",
+      "description": "Seller displayed for the selected offer."
+    },
+    "sellerType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Seller type",
+      "description": "Normalized seller classification when available."
+    },
+    "offerScope": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Offer scope",
+      "description": "Whether the selected price is locally fulfillable or shipping-only."
+    },
+    "fulfillment": {
+      "type": "object",
+      "title": "Fulfillment",
+      "description": "Shipping, pickup, and delivery signals for the selected offer and store context.",
+      "additionalProperties": false,
+      "properties": {
+        "shipping": {
+          "type": "string",
+          "enum": [
+            "AVAILABLE",
+            "UNAVAILABLE",
+            "UNKNOWN"
+          ]
+        },
+        "pickup": {
+          "type": "string",
+          "enum": [
+            "AVAILABLE",
+            "UNAVAILABLE",
+            "UNKNOWN"
+          ]
+        },
+        "delivery": {
+          "type": "string",
+          "enum": [
+            "AVAILABLE",
+            "UNAVAILABLE",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "required": [
+        "shipping",
+        "pickup",
+        "delivery"
+      ]
+    },
+    "previous": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "title": "Previous observation",
+      "description": "Last successfully delivered observation for this monitor, item, and ZIP.",
+      "additionalProperties": false,
+      "properties": {
+        "price": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "availability": {
+          "type": "string"
+        },
+        "sellerName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "storeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "offerScope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fulfillment": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "shipping": {
+              "type": "string"
+            },
+            "pickup": {
+              "type": "string"
+            },
+            "delivery": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "shipping",
+            "pickup",
+            "delivery"
+          ]
+        },
+        "fetchedAt": {
+          "type": "string"
+        },
+        "snapshotVersion": {
+          "type": "integer"
+        }
+      }
+    },
+    "changes": {
+      "type": "array",
+      "title": "Changes",
+      "description": "Typed differences from previous to current observation.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "from": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "to": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "from",
+          "to",
+          "type"
+        ]
+      }
+    },
+    "isFirstObservation": {
+      "type": "boolean",
+      "title": "First observation",
+      "description": "True when no prior successful observation exists for this monitor, item, and ZIP."
+    },
+    "latencyMs": {
+      "type": "number",
+      "title": "Latency",
+      "description": "Product-fetch latency measured by the runtime, in milliseconds."
+    },
+    "fetchedAt": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Fetched at",
+      "description": "UTC timestamp for the observation."
+    },
+    "schemaVersion": {
+      "type": "string",
+      "title": "Schema version",
+      "description": "Version of the result-row contract."
+    }
+  },
+  "required": [
+    "combinationId",
+    "inputRef",
+    "itemId",
+    "zipCodeRequested",
+    "zipCodeResolved",
+    "locationApplied",
+    "storeId",
+    "storeDistanceMiles",
+    "status",
+    "reasonCode",
+    "reasonCodes",
+    "failureStage",
+    "message",
+    "title",
+    "price",
+    "currency",
+    "availability",
+    "sellerName",
+    "sellerType",
+    "offerScope",
+    "fulfillment",
+    "previous",
+    "changes",
+    "isFirstObservation",
+    "fetchedAt",
+    "schemaVersion"
+  ]
+}

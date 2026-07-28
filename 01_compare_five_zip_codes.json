@@ -1,0 +1,21 @@
+{
+  "failOnCriticalHealth": true,
+  "includeUnchanged": true,
+  "products": [
+    {
+      "itemId": "10450114",
+      "reference": "whole-milk-gallon"
+    },
+    {
+      "itemId": "10534289",
+      "reference": "hash-brown-patties"
+    }
+  ],
+  "zipCodes": [
+    "10001",
+    "90210",
+    "60601",
+    "33101",
+    "75201"
+  ]
+}

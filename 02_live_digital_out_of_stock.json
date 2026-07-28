@@ -1,0 +1,46 @@
+{
+  "combinationId": "redacted-combination-live-02",
+  "inputRef": "hash-brown-patties",
+  "itemId": "10534289",
+  "zipCodeRequested": "60601",
+  "zipCodeResolved": "60639",
+  "locationApplied": true,
+  "storeId": "5402",
+  "storeDistanceMiles": 6.61,
+  "status": "success",
+  "reasonCode": null,
+  "reasonCodes": [],
+  "failureStage": null,
+  "message": null,
+  "title": "Great Value Seasoned Potato Hash Brown Patties, Shredded, 22.5 oz, 10 Count (Frozen)",
+  "price": 3.58,
+  "currency": "USD",
+  "availability": "OUT_OF_STOCK",
+  "sellerName": "Walmart.com",
+  "sellerType": "WALMART",
+  "offerScope": "STORE_CONTEXT_ONLY",
+  "fulfillment": {
+    "shipping": "UNAVAILABLE",
+    "pickup": "UNAVAILABLE",
+    "delivery": "UNAVAILABLE"
+  },
+  "fetchedAt": "2026-07-28T12:28:40.051Z",
+  "schemaVersion": "1.1.0",
+  "previous": {
+    "price": 3.58,
+    "availability": "OUT_OF_STOCK",
+    "sellerName": "Walmart.com",
+    "storeId": "5402",
+    "offerScope": "STORE_CONTEXT_ONLY",
+    "fulfillment": {
+      "shipping": "UNAVAILABLE",
+      "pickup": "UNAVAILABLE",
+      "delivery": "UNAVAILABLE"
+    },
+    "fetchedAt": "2026-07-22T13:25:27.992Z",
+    "snapshotVersion": 2
+  },
+  "changes": [],
+  "isFirstObservation": false,
+  "latencyMs": 7320
+}
