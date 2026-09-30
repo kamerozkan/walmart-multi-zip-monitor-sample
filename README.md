@@ -1,6 +1,10 @@
 > **Live API:** [Run Walmart Multi-Zip Monitor on Apify](https://apify.com/kamerozkan/walmart-multi-zip-monitor)
 
-# Walmart Multi-Zip Monitor: Samples and JSON Schema
+# Walmart Product Scraper - Price & Stock by ZIP: Samples
+
+Walmart product scraper and price tracker for known product IDs across US ZIP codes. Compare local prices, digital stock, sellers and fulfillment options. Monitor price drops and restocks across repeat runs. Store context is verified; unavailable source fields stay explicit.
+
+[Run Walmart Product Scraper - Price & Stock by ZIP on Apify](https://apify.com/kamerozkan/walmart-multi-zip-monitor)
 
 [![Apify Actor](https://img.shields.io/badge/Apify-Run%20Actor-00c7b7?logo=apify)](https://apify.com/kamerozkan/walmart-multi-zip-monitor)
 ![JSON Schema](https://img.shields.io/badge/schema-JSON%20Schema%202020--12-4c1)

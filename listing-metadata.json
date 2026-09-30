@@ -1,0 +1,15 @@
+{
+  "id": "3cwqAqYVIVaObWGRE",
+  "name": "walmart-multi-zip-monitor",
+  "title": "Walmart Product Scraper - Price & Stock by ZIP",
+  "description": "Walmart product scraper and price tracker for known product IDs across US ZIP codes. Compare local prices, digital stock, sellers and fulfillment options. Monitor price drops and restocks across repeat runs. Store context is verified; unavailable source fields stay explicit.",
+  "seoTitle": "Walmart Product Scraper - Price & Stock by ZIP",
+  "seoDescription": "Track Walmart product prices and stock across US ZIP codes. Compare exact items, store context, sellers and pickup options; monitor changes over time.",
+  "isPublic": true,
+  "url": "https://apify.com/kamerozkan/walmart-multi-zip-monitor",
+  "checkedAt": "2026-09-30",
+  "changeScope": "listing metadata and sample documentation only",
+  "runtimeChanged": false,
+  "schemasChanged": false,
+  "examplesRegenerated": false
+}
