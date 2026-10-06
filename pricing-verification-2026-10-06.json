@@ -1,0 +1,90 @@
+{
+  "checkedAtUtc": "2026-10-06T17:44:37.629665+00:00",
+  "actorId": "3cwqAqYVIVaObWGRE",
+  "actorUrl": "https://apify.com/kamerozkan/walmart-multi-zip-monitor",
+  "source": "authenticated GET of saved active pricing and latest frozen build; no execution",
+  "checkedLatestBuild": {
+    "buildId": "vuNLYeuaZNX5YHFMZ",
+    "finishedAt": "2026-09-01T20:32:09.312Z",
+    "buildNumberInt": 41,
+    "buildNumber": "0.0.41"
+  },
+  "activePricing": {
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "minimalMaxTotalChargeUsd": 0.006,
+    "startedAt": "2026-09-16T00:00:00.000Z",
+    "pricingPerEvent": {
+      "actorChargeEvents": {
+        "validated-check": {
+          "eventTitle": "Validated product × ZIP check",
+          "eventDescription": "One successful Walmart product check with verified store context. Unchanged checks may be hidden from change-only output but are still billed.",
+          "isOneTimeEvent": false,
+          "eventTieredPricingUsd": {
+            "FREE": {
+              "tieredEventPriceUsd": 0.003
+            },
+            "BRONZE": {
+              "tieredEventPriceUsd": 0.0027
+            },
+            "SILVER": {
+              "tieredEventPriceUsd": 0.0024
+            },
+            "GOLD": {
+              "tieredEventPriceUsd": 0.0021
+            },
+            "PLATINUM": {
+              "tieredEventPriceUsd": 0.0021
+            },
+            "DIAMOND": {
+              "tieredEventPriceUsd": 0.0021
+            }
+          },
+          "isPrimaryEvent": true
+        },
+        "apify-actor-start": {
+          "eventTitle": "Actor Start",
+          "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+          "isOneTimeEvent": true,
+          "eventPriceUsd": 0.005
+        }
+      }
+    },
+    "createdAt": "2026-09-01T19:22:31.352Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-01T19:22:51.595Z",
+    "notifiedAboutChangeAt": "2026-09-16T00:05:56.200Z"
+  },
+  "pricingConfigurationChanged": false,
+  "newActorRuns": 0,
+  "newSourceObservations": false,
+  "newCustomerPaymentOrSatisfactionProven": false,
+  "historicalSampleFilesChanged": false,
+  "proposedReadmeSha256": "5abbbad2f2f244462c0c5db096406cee544e02e9cae373d0080a3a7b373e1780",
+  "savedActivePricingHash": "2912ddb54168ea1e2c240bc9465c486c3be8306f73aaa96511d79449023fb338",
+  "limits": [
+    "This record verifies billing configuration and source placement; it does not independently authenticate a customer output or prove source availability",
+    "Any subsequent publication build and public propagation must be verified separately"
+  ],
+  "notes": "One successful `validated-check` costs $0.003. Thus 25, 100 and 1,000 such checks cost $0.075, $0.30 and $3.00 in check events. Startup is $0.005 per GB with a minimum of one event; the default 2 GB adds $0.01. An unchanged check hidden from output remains billable; failed and partial checks have no check event.",
+  "publishedLatestBuild": {
+    "id": "Oc0VDjdBe2gsvhGfb",
+    "buildNumber": "0.0.42",
+    "status": "SUCCEEDED",
+    "startedAt": "2026-10-06T17:52:01.435Z",
+    "finishedAt": "2026-10-06T17:52:45.022Z"
+  },
+  "cloudPublicationCompletedAtUtc": "2026-10-06T17:56:45.967085+00:00",
+  "publicLatestVerified": true,
+  "allFrozenSourceHashesVerified": true,
+  "sourceFileCountVerified": 37,
+  "sourceChangedFiles": [
+    "README.md"
+  ],
+  "publishedReadmeSha256": "b0932c810c1b288988616d98f9bbe6e353e53b40a2e6b3e4b874808b8ca88a7e",
+  "protectedMetadataUnchanged": true,
+  "envUnchanged": true,
+  "cloudReleaseEvidenceSha256": "e2a3a656c8de64dfd5b8875de07071f259e4996f1bce60019a7aa68cbdcaf909",
+  "cloudSourceManifestSha256": "a80ddadb3c26e06bd04ee815c4df467283829c86a050dad0b2e23e4287f86d1d",
+  "cloudReadmeRepaired": true
+}

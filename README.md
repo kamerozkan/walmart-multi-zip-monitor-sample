@@ -15,6 +15,20 @@ Check known Walmart.com product IDs across a bounded set of U.S. ZIP codes. Each
 
 This repository contains three runnable inputs, three privacy-minimized live output samples, and the complete row contract in [`dataset_record.schema.json`](dataset_record.schema.json).
 
+
+## Current billing checked on October 6, 2026
+
+Checked against the saved active Actor pricing on October 6, 2026. These are Free-tier event rates; use the [Pricing tab](https://apify.com/kamerozkan/walmart-multi-zip-monitor/pricing) for your plan and memory allocation. Historical samples below keep their original dates and do not prove current source availability.
+
+One successful `validated-check` costs $0.003. Thus 25, 100 and 1,000 such checks cost $0.075, $0.30 and $3.00 in check events. Startup is $0.005 per GB with a minimum of one event; the default 2 GB adds $0.01. An unchanged check hidden from output remains billable; failed and partial checks have no check event.
+
+See [`pricing-verification-2026-10-06.json`](pricing-verification-2026-10-06.json) for the saved event configuration and scope.
+
+## October 6, 2026 publication
+
+The owner release check confirmed public `latest` build `0.0.42` (`Oc0VDjdBe2gsvhGfb`), its complete frozen source hashes and unchanged protected Actor settings. This publication did not run a new scrape. Older snapshots and sample outputs below retain their original dates; they are not evidence of current source availability, customer payment or satisfaction.
+
+
 ## Start here
 
 1. Open the [Actor on Apify](https://apify.com/kamerozkan/walmart-multi-zip-monitor).

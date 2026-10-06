@@ -103,3 +103,7 @@ Users are responsible for reviewing applicable law, platform terms, retention ru
 ## Listing update on September 30, 2026
 
 The Store title, description and search metadata were checked against the owned Actor and synchronized with this repository. This documentation update does not alter executable code, input or output schemas, recorded test outputs, artifact hashes, billing or runtime builds. Existing examples retain their original dates and validation limits. A public listing is not evidence of successful output, network acceptance or an achieved search ranking.
+
+## Pricing documentation check on October 6, 2026
+
+The billing explanation was reconciled with the saved active event configuration and frozen source charge locations. The actual price configuration was not changed. This pricing check started no Actor run, collected no new source data and proves no customer payment or satisfaction. Historical sample records and dates remain unchanged. See [`pricing-verification-2026-10-06.json`](pricing-verification-2026-10-06.json).
