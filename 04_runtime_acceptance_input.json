@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "itemId": "10450118"
+    },
+    {
+      "itemId": "10450114"
+    },
+    {
+      "itemId": "10315355"
+    }
+  ],
+  "zipCodes": [
+    "10001"
+  ],
+  "includeUnchanged": true,
+  "proxyMode": "RESIDENTIAL",
+  "failOnCriticalHealth": true
+}

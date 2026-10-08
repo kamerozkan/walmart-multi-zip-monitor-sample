@@ -107,3 +107,10 @@ The Store title, description and search metadata were checked against the owned 
 ## Pricing documentation check on October 6, 2026
 
 The billing explanation was reconciled with the saved active event configuration and frozen source charge locations. The actual price configuration was not changed. This pricing check started no Actor run, collected no new source data and proves no customer payment or satisfaction. Historical sample records and dates remain unchanged. See [`pricing-verification-2026-10-06.json`](pricing-verification-2026-10-06.json).
+
+
+## 8 October 2026 acceptance
+
+Files prefixed `04_runtime_acceptance_` come from the owner's bounded three-product, one-ZIP run `NybCHqoa5x8lftx3A`, runtime build `0.0.45`. All three rows were successful with `locationApplied=true`, store `3520`, and explicit requested/resolved ZIP fields. Three validated-check events and one automatic startup event were recorded; accounted event counts were zero, so this is not customer revenue. Combination IDs were replaced with sample identifiers; product fields and observation timestamps are preserved. These files do not update the dates or provenance of earlier samples.
+
+The final public build is `0.0.46` (`maDwjBK7UBgQG8hSE`). It differs from the tested `0.0.45` (`MbBh26Sxu7KAQ8tzB`) only in README text; runtime, dependencies, container and schemas match byte for byte. Thirty-five affected author tests and five independent adversarial checks passed. The Actor default and both public Example Tasks now use 512 MB. See [`runtime-verification-2026-10-08.json`](runtime-verification-2026-10-08.json) for timestamps, source hashes and scope. No nationwide, source uptime, profitability or future freshness guarantee is implied.

@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "title": "Walmart Price & Stock Monitor by ZIP",
+  "description": "Check a known list of Walmart products across US ZIP codes. Each product is checked in every ZIP, with a hard limit of 100 product \u00d7 ZIP checks per run.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "products": {
+      "title": "Walmart products",
+      "type": "array",
+      "description": "Add 1-100 Walmart item IDs or product URLs. Use reference to keep your own SKU or label in every result row. Cost scales with the matrix: every product is checked in every ZIP at $0.003 per successful validated check; failed and partial checks are free.",
+      "editor": "schemaBased",
+      "minItems": 1,
+      "maxItems": 100,
+      "prefill": [
+        {
+          "itemId": "10450118",
+          "reference": "milk-half-gallon"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "itemId": {
+            "title": "Walmart item ID",
+            "type": "string",
+            "description": "Numeric Walmart item ID, usually visible at the end of the product URL.",
+            "editor": "textfield",
+            "pattern": "^[0-9]{5,20}$"
+          },
+          "url": {
+            "title": "Walmart product URL",
+            "type": "string",
+            "description": "Alternative to itemId: a walmart.com product URL containing a numeric item ID.",
+            "editor": "textfield",
+            "pattern": "^https://([A-Za-z0-9-]+\\.)?walmart\\.com/ip/.+/[0-9]{5,20}(?:[/?#].*)?$"
+          },
+          "reference": {
+            "title": "Your reference",
+            "type": "string",
+            "description": "Optional customer SKU, alert label, or internal identifier returned as inputRef.",
+            "editor": "textfield",
+            "minLength": 1,
+            "maxLength": 128
+          }
+        }
+      }
+    },
+    "zipCodes": {
+      "title": "US ZIP codes",
+      "type": "array",
+      "description": "Add 1-5 valid five-digit US ZIP codes. Every product is checked in every ZIP, so 10 products x 3 ZIPs = 30 checks. Malformed ZIPs are rejected before source lookups or validated-check charges; the platform start fee can still apply.",
+      "editor": "stringList",
+      "minItems": 1,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "prefill": [
+        "10001",
+        "90210"
+      ],
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]{5}$"
+      }
+    },
+    "monitorName": {
+      "title": "Monitor name",
+      "type": "string",
+      "description": "Stable 3-64 character name used to compare this run with the previous successful observation for the same item and ZIP.",
+      "editor": "textfield",
+      "pattern": "^[A-Za-z0-9._-]{3,64}$",
+      "minLength": 3,
+      "maxLength": 64
+    },
+    "monitorKey": {
+      "title": "Legacy monitor key",
+      "type": "string",
+      "description": "Deprecated compatibility field for existing saved tasks. New integrations should use monitorName.",
+      "editor": "hidden",
+      "isSecret": true
+    },
+    "includeUnchanged": {
+      "title": "Include unchanged observations",
+      "type": "boolean",
+      "description": "Keep every validated row. Turn off to return only first baselines, real changes, and explicit failures; unchanged rows are hidden from the dataset but their validated checks are still billed because Walmart was queried and the store context verified. monitorName is required for change detection.",
+      "default": true
+    },
+    "maxConcurrency": {
+      "title": "Validated request concurrency",
+      "type": "integer",
+      "description": "Fixed at the production-validated safe value.",
+      "editor": "hidden",
+      "default": 1,
+      "minimum": 1,
+      "maximum": 1
+    },
+    "proxyMode": {
+      "title": "Validated proxy route",
+      "type": "string",
+      "description": "US Residential Proxy is the validated production route.",
+      "editor": "select",
+      "default": "RESIDENTIAL",
+      "enum": [
+        "RESIDENTIAL"
+      ],
+      "enumTitles": [
+        "US Residential Proxy (validated)"
+      ]
+    },
+    "failOnCriticalHealth": {
+      "title": "Fail on systemic outage",
+      "type": "boolean",
+      "description": "Fails the run after writing diagnostics when every check returns a systemic failure and no validated row is produced.",
+      "editor": "hidden",
+      "default": true
+    }
+  },
+  "required": [
+    "products",
+    "zipCodes"
+  ]
+}

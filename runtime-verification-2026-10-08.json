@@ -1,0 +1,172 @@
+{
+  "checkedAtUtc": "2026-10-08T20:16:05.739675+00:00",
+  "actorId": "3cwqAqYVIVaObWGRE",
+  "actorName": "walmart-multi-zip-monitor",
+  "publicLatest": {
+    "id": "maDwjBK7UBgQG8hSE",
+    "buildNumber": "0.0.46",
+    "status": "SUCCEEDED",
+    "startedAt": "2026-10-08T20:11:55.049Z",
+    "finishedAt": "2026-10-08T20:12:09.040Z"
+  },
+  "publicationVerified": true,
+  "sourceVerification": {
+    "all39FrozenSourceFilesMatched": true,
+    "fileCount": 39,
+    "acceptanceBuildId": "MbBh26Sxu7KAQ8tzB",
+    "acceptanceBuildNumber": "0.0.45",
+    "latestBuildId": "maDwjBK7UBgQG8hSE",
+    "changedFilesFromAcceptanceBuild": [
+      "README.md"
+    ],
+    "runtimeAndDependenciesAndDockerAndSchemasByteIdentical": true,
+    "runtimeSourceHashes": {
+      ".actor/actor.json": "0ca56c9f1f323f04f60621805a22071fab131f3b35cb6f9a054bb4158187c96c",
+      "Dockerfile": "d2ac748c2a7f5794431119bc5b4b145138efd1956d56bcd1201ce9eb7ff80afb",
+      "package-lock.json": "f99c493dc7d6744157ac32784b3cb640bebb5633af6ab390910bf03f0684860c",
+      "package.json": "d2b9d3e65392d46082f998be2c529954df0694d406b58cc1adbd5599de7d0e7b",
+      "schemas/dataset_schema.json": "10d9798200825e9dcf8e5117d10b86bbb54e974ca4cb301c7932f088ec3cfcd1",
+      "schemas/input_schema.json": "8d68bbf2cbeac1aeb873add447f555db756a0c20009b611ac66e2eb6bc55be8e",
+      "src/apify-history.js": "b0f7d73f5ac4a17a176cc86bd07c6cd6e48d63f73c0083ab98b3e439cf674672",
+      "src/billing.js": "f14f32a1f986041f6e38e2a030305c151b86aad93ca092c1831bce6e926fbff7",
+      "src/concurrency.js": "a9e46aa6131bcaea01c371430d5e13d040785ca0319c1f6bf5629f84268824e9",
+      "src/errors.js": "f5a251402b2814e6eca43a81851679bac659573a8d30efba1a98a212b7d5b9b5",
+      "src/history.js": "66e9d98c773eebf61444437533b3078e36fda9b92eecb0c74c79a16fe27beb82",
+      "src/input.js": "3a0695d1de327f7cc4f106d71b50e7fe86aca0168df1d8c390843daeb81948fc",
+      "src/live-adapter.js": "212a27179345a6fdca7efe700ae72e9434c400edec41d8c3064107a46ccf9a7b",
+      "src/main.js": "799803e7c5aea54e9e409b13131b2e028ad00260bdd71bdcd2c30c38458c19e8",
+      "src/matrix.js": "d54f3615b5ae4d28ee3e4378582651d34a9f303118d0477b1f6d55a6bb8aacee",
+      "src/parser.js": "2809492ea6c43ed27bda18734c57cddb6774a7d307fd21736a5ac466731a5615",
+      "src/pipeline.js": "7ad5ce725168aa778768d39d94bbc36567a7c74042156594007e26eb2c41010c",
+      "src/playwright-runtime.js": "f5abff4aee36468ba62e6a4e1dceb1e8860ebdbaa078e61a677d6092beca78be",
+      "src/proxy.js": "775a092c0bee8062d362ec1cd61686fe959f3532aafc7bcf152ca06ac2babc0c",
+      "src/runner.js": "ad8ad26d1013edb362db1f58b0d6343266eb3cf9d85a2153213b4a7b04e3b8d8",
+      "src/validation.js": "f358fdff4975f95f99bf9575f16d6e8118c6282e30e1f5380df19e7e775baced",
+      "src/request-sessions.js": "0e5e99f07856223d1f5097e4152f8de58ab48748674c962c4fae67d24a7e8c2e"
+    },
+    "environmentUnchanged": true
+  },
+  "changes": [
+    "Use HTTP request sessions without starting Chromium",
+    "Use the lightweight Node.js container and direct node startup",
+    "Dispose HTTP response bodies after reading or rejection",
+    "Skip store lookup when no validated-check charge fits the customer cap",
+    "Propagate diagnostic storage failure without repeating or relabeling rows",
+    "Correct start-fee wording and lower default memory to512MB"
+  ],
+  "validation": {
+    "affectedAuthorTestsPassed": 35,
+    "newAuthorTestsIncluded": 7,
+    "independentAdversarialChecksPassed": 5,
+    "independentCheckNames": [
+      "context creation error does not poison factory or retain a phantom session",
+      "concurrent session and factory cleanup dispose each resource exactly once",
+      "cleanup waits for slow disposal even when another context disposal fails",
+      "mixed available and exhausted ZIPs retain explicit free diagnostics without cross ZIP fetch",
+      "cap diagnostic persistence failure aborts rather than duplicating already delivered rows"
+    ],
+    "localSourceRequests": 0,
+    "localHttpIntegration": "Actual Playwright request sessions against localhost; independent cookie state, user-agent, locale and disposal checked",
+    "dockerBuildGate": "RUN npm test is present in the verified Dockerfile; final build status is SUCCEEDED"
+  },
+  "datedOwnerAcceptance": {
+    "runId": "NybCHqoa5x8lftx3A",
+    "buildNumber": "0.0.45",
+    "buildId": "MbBh26Sxu7KAQ8tzB",
+    "startedAt": "2026-10-08T20:07:16.419Z",
+    "finishedAt": "2026-10-08T20:07:32.763Z",
+    "status": "SUCCEEDED",
+    "healthStatus": "HEALTHY",
+    "requested": 3,
+    "emitted": 3,
+    "success": 3,
+    "partial": 0,
+    "failed": 0,
+    "requestedZip": "10001",
+    "resolvedZip": "07094",
+    "storeId": "3520",
+    "locationAppliedForAllRows": true,
+    "productIds": [
+      "10450118",
+      "10450114",
+      "10315355"
+    ],
+    "observationTimes": [
+      "2026-10-08T20:07:25.402Z",
+      "2026-10-08T20:07:28.249Z",
+      "2026-10-08T20:07:32.349Z"
+    ],
+    "chargedEventCounts": {
+      "validated-check": 3,
+      "apify-actor-start": 1
+    },
+    "accountedChargedEventCounts": {
+      "validated-check": 0,
+      "apify-actor-start": 0
+    },
+    "isOwnerTechnicalTest": true,
+    "isCustomerRevenue": false,
+    "memoryMbytes": 512,
+    "durationSeconds": 16.153,
+    "peakMemoryBytes": 130699264,
+    "observedPlatformUsageUsd": 0.005079501783546474,
+    "costIsFinalInvoice": false
+  },
+  "defaults": {
+    "actorMemoryMbytes": 512,
+    "publicExampleTasks": [
+      {
+        "id": "bf8K5citBpGdKx3wt",
+        "name": "compare-walmart-prices-across-5-zip-codes",
+        "build": "latest",
+        "memoryMbytes": 512,
+        "inputsUnchanged": true,
+        "readbackVerified": true
+      },
+      {
+        "id": "5BK6oCAFavoRVxdgS",
+        "name": "monitor-walmart-price-drops-and-restocks-by-zip",
+        "build": "latest",
+        "memoryMbytes": 512,
+        "inputsUnchanged": true,
+        "readbackVerified": true
+      }
+    ],
+    "existingCustomerTasksMayRetainOwnMemory": true,
+    "schedulesChanged": false
+  },
+  "billing": {
+    "priceConfigurationChanged": false,
+    "freeTierValidatedCheckUsd": 0.003,
+    "automaticStartPerGbUsd": 0.005,
+    "minimumStartEvents": 1,
+    "failedOrPartialRowsHaveValidatedCheckCharge": false,
+    "startFeeCanApplyToFailedOrInvalidRuns": true,
+    "unchangedSuccessfulChecksCanStillBeBilled": true,
+    "seeCurrentPricing": "https://apify.com/kamerozkan/walmart-multi-zip-monitor/pricing"
+  },
+  "provenance": {
+    "earlierSamplesDatesUnchanged": true,
+    "newSampleFiles": [
+      "04_runtime_acceptance_input.json",
+      "04_runtime_acceptance_output.json",
+      "04_runtime_acceptance_summary.json"
+    ],
+    "redaction": "Only combinationId values were replaced with sample identifiers; all other result fields and original timestamps match the owner dataset.",
+    "publicSampleSha256": {
+      "04_runtime_acceptance_input.json": "96393ce94a47f690222c4109d81859db4160fe373c70b667dd370f606b6a6286",
+      "04_runtime_acceptance_output.json": "3b30aa291d8f92ab97c6c05e8dd5d177aa71d7f31437ef1b98b384493e46a986",
+      "04_runtime_acceptance_summary.json": "eca589ef9bbd3dbd1d439b522006560ecd2cb1de95172020fd7136fa07e6aa55",
+      "input_schema.json": "8d68bbf2cbeac1aeb873add447f555db756a0c20009b611ac66e2eb6bc55be8e"
+    },
+    "scopeLimits": [
+      "Three distinct products in one requested ZIP were checked, not the full matrix limit or nationwide inventory",
+      "Latest0.0.46 differs from the tested0.0.45 only in README; runtime parity is verified",
+      "A successful platform run alone is not useful output; the three actual dataset rows were inspected",
+      "This is owner acceptance, not outside customer usage or customer payment",
+      "Observed platform usage is not a final invoice and does not guarantee future cost or any profit margin",
+      "Historical month profitability is not reset by a new build",
+      "Source blocks, larger HTML, retries, other ZIPs and custom task memory can change future costs"
+    ]
+  }
+}

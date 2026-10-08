@@ -20,7 +20,7 @@ This repository contains three runnable inputs, three privacy-minimized live out
 
 Checked against the saved active Actor pricing on October 6, 2026. These are Free-tier event rates; use the [Pricing tab](https://apify.com/kamerozkan/walmart-multi-zip-monitor/pricing) for your plan and memory allocation. Historical samples below keep their original dates and do not prove current source availability.
 
-One successful `validated-check` costs $0.003. Thus 25, 100 and 1,000 such checks cost $0.075, $0.30 and $3.00 in check events. Startup is $0.005 per GB with a minimum of one event; the default 2 GB adds $0.01. An unchanged check hidden from output remains billable; failed and partial checks have no check event.
+One successful `validated-check` costs $0.003. Thus 25, 100 and 1,000 such checks cost $0.075, $0.30 and $3.00 in check events. Startup is $0.005 per GB with a minimum of one event; the default 512 MB adds $0.005 (one minimum start event). An unchanged check hidden from output remains billable; failed and partial checks have no check event.
 
 See [`pricing-verification-2026-10-06.json`](pricing-verification-2026-10-06.json) for the saved event configuration and scope.
 
@@ -345,7 +345,7 @@ Every dataset row must match [`dataset_record.schema.json`](dataset_record.schem
 - Polling cadence determines change-detection latency. This is not an exact real-time feed.
 - Website changes, throttling, blocking, and partial responses can produce explicit failures.
 - No uptime, freshness, completeness, or service-level guarantee is claimed by this repository.
-- Current build tag `0.0.38` built successfully on 2026-07-28, but the latest successful run used build `0.0.37`; the public-task output sample used build `0.0.36`.
+- At the historical 2026-07-28 audit, build tag `0.0.38` built successfully, but the latest successful run used build `0.0.37`; the public-task output sample used build `0.0.36`.
 
 ## Verified snapshot
 
@@ -361,6 +361,15 @@ At the 2026-07-28 audit:
 - No replay output is included in this repository.
 
 See [`DATA_NOTICE.md`](DATA_NOTICE.md) for task, run, dataset, redaction, and interpretation details.
+
+
+## 8 October 2026 runtime update
+
+The Actor now uses HTTP request sessions without starting Chromium, a lightweight Node.js container and a 512 MB default. The two public Example Tasks use the same lower memory. Saved customer tasks can retain their own allocation; the startup fee remains $0.005 per GB, with at least one event below 1 GB. Failed or partial checks have no validated-check event, but startup can still be charged.
+
+A bounded owner acceptance run on runtime build `0.0.45` returned three validated product observations for requested ZIP `10001`. Walmart selected store `3520` in ZIP `07094`; the difference is retained explicitly. See [dated input](04_runtime_acceptance_input.json), [redacted observations](04_runtime_acceptance_output.json), [summary](04_runtime_acceptance_summary.json) and [release evidence](runtime-verification-2026-10-08.json). These observations are a dated technical test, not customer activity or current shelf inventory. Public build `0.0.46` has the same runtime, dependency, container and schema bytes as tested build `0.0.45`; its only change is README text.
+
+When no further check fits the run charge cap, the Actor skips source lookups and emits `CHARGE_LIMIT_REACHED` diagnostics. The minimum permitted Console cap can be too small for a result after startup; budget for startup plus at least one check at your plan's rate. More memory increases startup charges.
 
 ## License
 

@@ -7,23 +7,46 @@
   "seoDescription": "Track Walmart product prices and stock across US ZIP codes. Compare exact items, store context, sellers and pickup options; monitor changes over time.",
   "isPublic": true,
   "url": "https://apify.com/kamerozkan/walmart-multi-zip-monitor",
-  "checkedAt": "2026-10-06",
-  "changeScope": "Current billing documentation and verified publication",
-  "runtimeChanged": false,
-  "schemasChanged": false,
+  "checkedAt": "2026-10-08",
+  "changeScope": "Browserless low-memory runtime, public example settings and dated owner acceptance",
+  "runtimeChanged": true,
+  "schemasChanged": "input help text only",
   "examplesRegenerated": false,
   "pricingDocumentationCheckedAt": "2026-10-06",
   "pricingDocumentationChangeScope": "Current billing explanation; actual price configuration unchanged",
   "pricingDocumentationRuntimeChanged": false,
   "pricingVerificationFile": "pricing-verification-2026-10-06.json",
-  "maintenanceCheckedAt": "2026-10-06",
+  "maintenanceCheckedAt": "2026-10-08",
   "publishedLatestBuild": {
+    "id": "maDwjBK7UBgQG8hSE",
+    "buildNumber": "0.0.46",
+    "status": "SUCCEEDED",
+    "startedAt": "2026-10-08T20:11:55.049Z",
+    "finishedAt": "2026-10-08T20:12:09.040Z"
+  },
+  "maintenanceEvidenceFile": "runtime-verification-2026-10-08.json",
+  "pricingConfigurationChanged": false,
+  "newDatedAcceptanceExamples": true,
+  "previousPublicationSnapshot": {
     "id": "Oc0VDjdBe2gsvhGfb",
     "buildNumber": "0.0.42",
     "status": "SUCCEEDED",
     "startedAt": "2026-10-06T17:52:01.435Z",
     "finishedAt": "2026-10-06T17:52:45.022Z"
   },
-  "maintenanceEvidenceFile": "pricing-verification-2026-10-06.json",
-  "pricingConfigurationChanged": false
+  "runtimeAcceptance": {
+    "runId": "NybCHqoa5x8lftx3A",
+    "buildNumber": "0.0.45",
+    "buildId": "MbBh26Sxu7KAQ8tzB",
+    "startedAt": "2026-10-08T20:07:16.419Z",
+    "finishedAt": "2026-10-08T20:07:32.763Z",
+    "ownerRun": true,
+    "customerRevenue": false,
+    "rows": 3,
+    "success": 3,
+    "latestRuntimeSourceIdentical": true
+  },
+  "defaultMemoryMbytes": 512,
+  "publicExampleTaskMemoryMbytes": 512,
+  "schemaChangeScope": "Input help text only; input fields, limits and data schema unchanged"
 }

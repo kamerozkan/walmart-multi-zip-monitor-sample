@@ -1,0 +1,69 @@
+{
+  "requested": 3,
+  "processed": 3,
+  "emitted": 3,
+  "suppressedUnchanged": 0,
+  "success": 3,
+  "partial": 0,
+  "failed": 0,
+  "chargeable": 3,
+  "storeLookupFailures": 0,
+  "systemicFailures": 0,
+  "reasonCounts": {},
+  "healthStatus": "HEALTHY",
+  "circuitBreaker": {
+    "enabled": true,
+    "maxConsecutiveHumanVerificationRowsPerZip": 2,
+    "humanVerificationRows": 0,
+    "skippedRows": 0,
+    "byZip": {
+      "10001": {
+        "tripped": false,
+        "humanVerificationRows": 0,
+        "consecutiveHumanVerificationRows": 0,
+        "skippedRows": 0,
+        "triggerReason": null
+      }
+    },
+    "tripped": false,
+    "trippedZipCodes": []
+  },
+  "timeToFirstRowMs": 5370,
+  "timeToFirstEmittedRowMs": 5370,
+  "billing": {
+    "pricingModel": "PAY_PER_EVENT",
+    "payPerEventActive": true,
+    "eventName": "validated-check",
+    "attempted": 3,
+    "charged": 3,
+    "rejected": 0,
+    "nonChargeableRows": 0,
+    "suppressedValidatedRows": 0
+  },
+  "runtime": {
+    "contextsCreated": 2,
+    "locationLookupAttempts": 1,
+    "productAttempts": 3,
+    "productSuccesses": 3,
+    "humanVerificationChallenges": 0,
+    "rotations": {
+      "proactive": 1,
+      "retry": 0,
+      "recovery": 0
+    },
+    "byZip": {
+      "10001": {
+        "contextsCreated": 2,
+        "locationLookupAttempts": 1,
+        "productAttempts": 3,
+        "productSuccesses": 3,
+        "humanVerificationChallenges": 0,
+        "rotations": {
+          "proactive": 1,
+          "retry": 0,
+          "recovery": 0
+        }
+      }
+    }
+  }
+}
